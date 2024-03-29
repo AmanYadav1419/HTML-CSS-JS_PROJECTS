@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: chocolate;
+}
+
+.card-container {
+    position: relative;
+    padding: 50px;
+    width: 400px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.card-container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 5px);
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    z-index: 1;
+    transition: 1s;
+}
+
+.card-container:hover::before{
+    bottom: 0;
+}
+
+.content {
+    position: relative;
+    color: black;
+    z-index: 2;
+    transition: 1s;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+}
+
+p{
+    padding: 20px 0;
+    margin: 20px 0;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    color: #fff;
+    background-color: orangered;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    transition: linear 0.4s;
+}
+
+.card-container:hover .content{
+    color: #fff;
+}
+
+a:hover{
+    color: #000;
+    background-color: #d3b2b4;
+}
